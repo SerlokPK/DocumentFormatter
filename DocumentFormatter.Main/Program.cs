@@ -1,4 +1,5 @@
 ﻿using DocumentFormatter.BusinessLogic;
+using DocumentFormatter.Common.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DocumentFormatter.Main
@@ -13,6 +14,8 @@ namespace DocumentFormatter.Main
             var serviceProvider = new ServiceCollection()
                 .AddBusinessLogicServices()
                 .BuildServiceProvider();
+
+            var test = ConfigurationHelper.GetMandatoryConfigurationValue("LoadLocation");
 
             Console.WriteLine("App started");
             Console.ReadKey();
