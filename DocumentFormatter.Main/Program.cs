@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DocumentFormatter.BusinessLogic;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DocumentFormatter.Main
 {
@@ -10,7 +11,11 @@ namespace DocumentFormatter.Main
         public static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-            .BuildServiceProvider();
+                .AddBusinessLogicServices()
+                .BuildServiceProvider();
+
+            Console.WriteLine("App started");
+            Console.ReadKey();
         }
     }
 }

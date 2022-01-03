@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

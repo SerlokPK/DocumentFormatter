@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DocumentFormatter.BusinessLogic\DocumentFormatter.BusinessLogic.csproj" />
+    <ProjectReference Include="..\DocumentFormatter.Common\DocumentFormatter.Common.csproj" />
+    <ProjectReference Include="..\DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
