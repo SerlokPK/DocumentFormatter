@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DocumentFormatter.Common\DocumentFormatter.Common.csproj" />
     <ProjectReference Include="..\DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj" />
   </ItemGroup>
 

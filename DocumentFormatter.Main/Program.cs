@@ -1,5 +1,5 @@
 ﻿using DocumentFormatter.BusinessLogic;
-using DocumentFormatter.Common.Helpers;
+using DocumentFormatter.Interfaces.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DocumentFormatter.Main
@@ -9,15 +9,22 @@ namespace DocumentFormatter.Main
     /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
                 .AddBusinessLogicServices()
                 .BuildServiceProvider();
 
-            var test = ConfigurationHelper.GetMandatoryConfigurationValue("LoadLocation");
-
             Console.WriteLine("App started");
+
+            var mainService = serviceProvider.GetService<IMainService>();
+            if (mainService is null)
+            {
+                throw new ArgumentNullException(nameof(mainService));
+            }
+
+            await mainService.Execute();
+
             Console.ReadKey();
         }
     }
