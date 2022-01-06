@@ -24,6 +24,7 @@ namespace DocumentFormatter.BusinessLogic.Services
         public async Task Execute()
         {
             var content = await _fileService.LoadFileContentAsync(_fileConfiguration.LoadPath);
+            await _fileService.UpdateNumberBullets(content, _fileConfiguration.SavePath);
         }
     }
 }

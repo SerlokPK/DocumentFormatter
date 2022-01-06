@@ -13,5 +13,12 @@ namespace DocumentFormatter.Interfaces.Services
         /// <param name="filePath">Path to the file</param>
         /// <returns>Content</returns>
         Task<string> LoadFileContentAsync(string filePath);
+
+        /// <summary>
+        /// Update number bullets from provided content
+        /// </summary>
+        /// <param name="content">String content</param>
+        /// <param name="savePath">Save path location</param>
+        Task UpdateNumberBullets(string content, string savePath);
     }
 }

@@ -16,4 +16,10 @@
     <ProjectReference Include="..\DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
