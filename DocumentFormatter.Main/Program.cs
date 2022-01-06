@@ -23,7 +23,7 @@ namespace DocumentFormatter.Main
                 throw new ArgumentNullException(nameof(mainService));
             }
 
-            await mainService.Execute();
+            await mainService.ExecuteAsync();
 
             Console.ReadKey();
         }

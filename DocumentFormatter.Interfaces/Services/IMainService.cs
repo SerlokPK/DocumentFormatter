@@ -10,6 +10,6 @@ namespace DocumentFormatter.Interfaces.Services
         /// <summary>
         /// Default method that will start execution of the business logic
         /// </summary>
-        Task Execute();
+        Task ExecuteAsync();
     }
 }

@@ -21,10 +21,10 @@ namespace DocumentFormatter.BusinessLogic.Services
         }
 
         /// <inheritdoc/>
-        public async Task Execute()
+        public async Task ExecuteAsync()
         {
             var content = await _fileService.LoadFileContentAsync(_fileConfiguration.LoadPath);
-            await _fileService.UpdateNumberBullets(content, _fileConfiguration.SavePath);
+            await _fileService.UpdateNumberBulletsAsync(content, _fileConfiguration.SavePath);
         }
     }
 }

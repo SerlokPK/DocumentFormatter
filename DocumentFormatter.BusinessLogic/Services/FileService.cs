@@ -21,7 +21,7 @@ namespace DocumentFormatter.BusinessLogic.Services
         }
 
         /// <inheritdoc/>
-        public async Task UpdateNumberBullets(string content, string savePath)
+        public async Task UpdateNumberBulletsAsync(string content, string savePath)
         {
             int bulletPosition = 0;
             StringBuilder formattedBuilder = new();

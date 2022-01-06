@@ -19,6 +19,6 @@ namespace DocumentFormatter.Interfaces.Services
         /// </summary>
         /// <param name="content">String content</param>
         /// <param name="savePath">Save path location</param>
-        Task UpdateNumberBullets(string content, string savePath);
+        Task UpdateNumberBulletsAsync(string content, string savePath);
     }
 }
