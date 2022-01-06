@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DocumentFormatter.BusinessLogic;
+using DocumentFormatter.Interfaces.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DocumentFormatter.Main
 {
@@ -7,10 +9,23 @@ namespace DocumentFormatter.Main
     /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-            .BuildServiceProvider();
+                .AddBusinessLogicServices()
+                .BuildServiceProvider();
+
+            Console.WriteLine("App started");
+
+            var mainService = serviceProvider.GetService<IMainService>();
+            if (mainService is null)
+            {
+                throw new ArgumentNullException(nameof(mainService));
+            }
+
+            await mainService.ExecuteAsync();
+
+            Console.ReadKey();
         }
     }
 }

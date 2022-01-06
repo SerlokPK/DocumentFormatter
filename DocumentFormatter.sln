@@ -9,7 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8C6C9A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormatter.BusinessLogic", "DocumentFormatter.BusinessLogic\DocumentFormatter.BusinessLogic.csproj", "{CE429E2B-A52A-41AF-990A-86913016CFEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormatter.Interfaces", "DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj", "{CF7D63D5-CC86-462B-ADF7-0FEC7AFEF8F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormatter.Interfaces", "DocumentFormatter.Interfaces\DocumentFormatter.Interfaces.csproj", "{CF7D63D5-CC86-462B-ADF7-0FEC7AFEF8F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormatter.Common", "DocumentFormatter.Common\DocumentFormatter.Common.csproj", "{E1AAF3AC-DCFE-48CE-9A47-A512A622121E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11461E53-D010-4B6E-949B-AA518269A68E}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +36,10 @@ Global
 		{CF7D63D5-CC86-462B-ADF7-0FEC7AFEF8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF7D63D5-CC86-462B-ADF7-0FEC7AFEF8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF7D63D5-CC86-462B-ADF7-0FEC7AFEF8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1AAF3AC-DCFE-48CE-9A47-A512A622121E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1AAF3AC-DCFE-48CE-9A47-A512A622121E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1AAF3AC-DCFE-48CE-9A47-A512A622121E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1AAF3AC-DCFE-48CE-9A47-A512A622121E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
